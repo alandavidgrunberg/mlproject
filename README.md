@@ -1,74 +1,28 @@
-# Data analysis
-- Document here the project: mlproject
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+Python package mlproject - module distance - function haversine <br>
+input longitude and latitude for two different points on globe to find haversine distance between them. 
+<br><br>
+-includes a script to run function directly from the terminal<br>
+-includes a testing suite using the code coverage package<br>
+-package created with packgenlite<br>
 
-Please document the project the better you can.
+Try it out !
+<br><br>
+install in terminal: <br>
+<b>pip install git+ssh://git@github.com/alandavidgrunberg/mlproject</b>
+<br><br>
+try in Python: <br>
+<b>from mlproject import distance</b><br>
+<b>distance.haversine(lon1,lat1,lon2,lat2)</b><br>
+<i>(pass longitudes and latitude values as comma-seperated floats or integers)</i>
+<br><br>
+try script in Terminal: <br>
+<b> mlproject-computedist --coords  lon1 lat1 lon2 lat3 </b><br>
+<i>(pass longitude and latitude values without comma seperation)</i>
+<br><br>
+run tests in Terminal: <br>
+<i>first, download entire package from GitHub, (not just pip install)<br>
+then, from inside 'mlproject' directory:<br></i>
+<b> make test </b>
 
-# Startup the project
 
-The initial setup.
 
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
-
-Unittest test:
-```bash
-make clean install test
-```
-
-Check for mlproject in gitlab.com/{group}.
-If your project is not set please add it:
-
-- Create a new project on `gitlab.com/{group}/mlproject`
-- Then populate it:
-
-```bash
-##   e.g. if group is "{group}" and project_name is "mlproject"
-git remote add origin git@github.com:{group}/mlproject.git
-git push -u origin master
-git push -u origin --tags
-```
-
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-mlproject-run
-```
-
-# Install
-
-Go to `https://github.com/{group}/mlproject` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:{group}/mlproject.git
-cd mlproject
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-mlproject-run
-```
